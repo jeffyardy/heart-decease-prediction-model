@@ -288,5 +288,5 @@ This project is for educational purposes as part of MLOps coursework.
 
 ## Author
 
-MLOps Assignment - Semester 3
+MLOps Assignment - group 118
 

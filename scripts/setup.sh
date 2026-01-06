@@ -15,11 +15,11 @@ mkdir -p logs
 
 # Create virtual environment
 echo "Creating virtual environment..."
-python3 -m venv venv
+python -m venv venv310
 
 # Activate virtual environment
 echo "Activating virtual environment..."
-source venv/bin/activate
+source venv310/bin/activate
 
 # Upgrade pip
 echo "Upgrading pip..."
