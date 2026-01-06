@@ -103,6 +103,3 @@ jobs:
           docker run -d -p 8000:8000 --name test-api heart-disease-api:latest
           sleep 10
           curl -f http://localhost:8000/health || exit 1
-          docker stop test-api
-          docker rm test-api
-
