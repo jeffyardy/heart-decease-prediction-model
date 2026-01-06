@@ -20,7 +20,7 @@ import sys
 
 # Add parent directory to path
 sys.path.append(str(Path(__file__).parent.parent))
-from src.data.preprocess import HeartDiseasePreprocessor
+#from src.data.preprocess import HeartDiseasePreprocessor
 
 
 def train_logistic_regression(X_train, y_train, X_test, y_test, experiment_name="heart_disease"):
