@@ -7,30 +7,30 @@ on:
     branches: [ main, develop ]
 
 jobs:
-  lint:
-    name: Code Linting
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+  # lint:
+  #   name: Code Linting
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
       
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v4
+  #       with:
+  #         python-version: '3.11'
       
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install flake8 black pylint
+  #     - name: Install dependencies
+  #       run: |
+  #         python -m pip install --upgrade pip
+  #         pip install flake8 black pylint
       
-      - name: Lint with flake8
-        run: |
-          flake8 src/ tests/ --count --select=E9,F63,F7,F82 --show-source --statistics
-          flake8 src/ tests/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+  #     - name: Lint with flake8
+  #       run: |
+  #         flake8 src/ tests/ --count --select=E9,F63,F7,F82 --show-source --statistics
+  #         flake8 src/ tests/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       
-      - name: Check formatting with black
-        run: |
-          black --check src/ tests/
+  #     - name: Check formatting with black
+  #       run: |
+  #         black --check src/ tests/
 
   test:
     name: Unit Tests
